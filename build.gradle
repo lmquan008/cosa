@@ -26,7 +26,6 @@ sourceSets {
 
 dependencies {
     apiCompile 'commons-codec:commons-codec:1.5'
-    apiCompile 'joda-time:joda-time:2.9.4'
     apiCompile 'org.hsqldb:hsqldb:2.3.4'
 
     implCompile sourceSets.api.output
