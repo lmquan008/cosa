@@ -1,4 +1,4 @@
-package com.cosa.mc.api.com;
+package com.cosa.mc.api.ele;
 
 /**
  * A variable is configured so that the Evaluator can get the values 

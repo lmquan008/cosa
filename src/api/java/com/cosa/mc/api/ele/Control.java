@@ -1,4 +1,4 @@
-package com.cosa.mc.api.com;
+package com.cosa.mc.api.ele;
 
 /**
  * 
@@ -10,5 +10,7 @@ package com.cosa.mc.api.com;
 public interface Control {
 	String getId();
 	String getName();
+	String getDescription();
 	RuleSet getRuleSet();
+	RuleSet getDefaultRuleSet();
 }
