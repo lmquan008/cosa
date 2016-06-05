@@ -10,4 +10,5 @@ import java.util.Set;
  */
 public interface RuleSet {
 	Set<Rule> getRules();
+	Control getControl();
 }

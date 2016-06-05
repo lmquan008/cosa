@@ -4,6 +4,8 @@ apply plugin: "maven"
 group = "myorg"
 version = 1.0
 
+def springVersion = "4.2.6.RELEASE"
+
 repositories {
     mavenCentral()
 }
@@ -27,6 +29,10 @@ sourceSets {
 dependencies {
     apiCompile 'commons-codec:commons-codec:1.5'
     apiCompile 'org.hsqldb:hsqldb:2.3.4'
+    
+    apiCompile 'org.springframework:spring-jdbc:'+ springVersion
+    apiCompile 'org.springframework:spring-context:'+ springVersion
+    apiCompile 'org.springframework.boot:spring-boot-starter-web:1.3.5.RELEASE'
 
     implCompile sourceSets.api.output
     implCompile 'commons-lang:commons-lang:2.6'
@@ -43,6 +49,16 @@ jar {
     from sourceSets.impl.output
 }
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.5.RELEASE")
+    }
+}
+
+/*
 uploadArchives {
     repositories {
         mavenDeployer {
@@ -64,3 +80,4 @@ uploadArchives {
         }
     }
 }
+*/

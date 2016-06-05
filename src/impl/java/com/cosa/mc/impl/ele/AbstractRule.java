@@ -2,11 +2,17 @@ package com.cosa.mc.impl.ele;
 
 import java.time.LocalDate;
 
+import com.cosa.mc.api.ele.Control;
 import com.cosa.mc.api.ele.Rule;
 import com.cosa.mc.api.ele.RuleCondition;
+import com.cosa.mc.api.ele.RuleSet;
 import com.cosa.mc.api.ele.Value;
 
 public abstract class AbstractRule implements Rule {
+
+	transient private RuleSet ruleSet;
+	private LocalDate startDate;
+	private LocalDate endDate;
 
 	@Override
 	public Value getValue() {
@@ -15,27 +21,24 @@ public abstract class AbstractRule implements Rule {
 	}
 
 	@Override
-	public Boolean isDefault() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public LocalDate getStartDate() {
-		// TODO Auto-generated method stub
-		return null;
+		return startDate;
 	}
 
 	@Override
 	public LocalDate getEndDate() {
-		// TODO Auto-generated method stub
-		return null;
+		return endDate;
 	}
 
 	@Override
 	public RuleCondition getRuleCondition() {
-		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	@Override
+	public Control getControl() {
+		// TODO Auto-generated method stub
+		return this.ruleSet.getControl();
 	}
 
 }

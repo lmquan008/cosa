@@ -11,7 +11,7 @@ import com.cosa.mc.api.Context;
  * @author QuanLe
  *
  */
-public interface Value {
+public interface Value extends Comparable<Value>{
 	
 	Value getResolvedValue(Context context);
 	Value getUnresolvedValue();

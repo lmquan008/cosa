@@ -15,4 +15,5 @@ public interface Rule {
 	LocalDate getStartDate();
 	LocalDate getEndDate();
 	RuleCondition getRuleCondition();
+	Control getControl();
 }

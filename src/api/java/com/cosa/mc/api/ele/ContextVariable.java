@@ -1,14 +1,17 @@
 package com.cosa.mc.api.ele;
 
+import com.cosa.mc.api.Context;
+
 /**
- * A variable is configured so that the Evaluator can get the values 
- * based on the condition and context.
+ * A variable is configured so that the Evaluator can get the value 
+ * based on the context.
  * 
  * @author QuanLe
  *
  */
 public interface ContextVariable  {
-	Integer getId();
-	String getClassName();
+	String getId();
+	String getObjectName();
 	String getAccessPath();
+	Value getValue(Context context);
 }
