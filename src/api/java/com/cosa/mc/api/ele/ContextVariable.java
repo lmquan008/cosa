@@ -13,5 +13,5 @@ public interface ContextVariable  {
 	String getId();
 	String getObjectName();
 	String getAccessPath();
-	Value getValue(Context context);
+	Value eval(Context context);
 }

@@ -31,7 +31,7 @@ public abstract class AbstractConditionalExpression implements ConditionalExpres
 	
 	@Override
 	public BooleanValue eval(Context context) {
-		return operator.produce(expectedValue, variable.getValue(context));
+		return operator.produce(expectedValue, variable.eval(context));
 	}
 	
 	

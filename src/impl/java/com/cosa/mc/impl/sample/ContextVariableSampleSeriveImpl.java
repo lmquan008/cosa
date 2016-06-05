@@ -13,12 +13,13 @@ import com.cosa.mc.api.anotated.ContextObject;
 import com.cosa.mc.api.anotated.ContextProperty;
 import com.cosa.mc.api.ele.ContextVariable;
 import com.cosa.mc.api.service.ContextVariableService;
+import com.cosa.mc.impl.ele.ContextVariableImpl;
 
 @Service
 @Qualifier("contextVariableSampleService")
 public class ContextVariableSampleSeriveImpl implements ContextVariableService {
 	Map<String, ContextVariable> contextVariableMap 
-			= Collections.unmodifiableMap(new HashMap<>());
+			= new HashMap<>();
 	public ContextVariableSampleSeriveImpl() {
 		scan();
 	}
@@ -30,16 +31,27 @@ public class ContextVariableSampleSeriveImpl implements ContextVariableService {
 		Method[] methods = Student.class.getMethods();
 		String pid = StringUtils.EMPTY;
 		String pname = StringUtils.EMPTY;
+		String assessPath = StringUtils.EMPTY;
 		for(Method m : methods){
 			ContextProperty contextProperty = m.getAnnotation(ContextProperty.class);
 			if(contextProperty == null) continue;
 			pid = contextProperty.id();
 			pname = contextProperty.name();
+			assessPath = m.getName();
 		}
 		
 		System.out.println("The Object Name is : "+ name);
 		System.out.println("The Method ID is : "+ pid);
-		System.out.println("The Method Name is : "+ pname);
+		System.out.println("The Method Name is : "+ assessPath);
+		
+		ContextVariable ctxVar = new ContextVariableImpl(pid, name, assessPath);
+		System.out.println(ctxVar);
+		
+		Map<String, ContextVariable> cm = new HashMap<>();
+		cm.put(pid, ctxVar);
+		
+		this.contextVariableMap = Collections.unmodifiableMap(cm); 
+		
 	}
 
 	@Override
