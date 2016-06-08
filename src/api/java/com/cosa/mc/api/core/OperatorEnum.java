@@ -1,4 +1,4 @@
-package com.cosa.mc.api.ele;
+package com.cosa.mc.api.core;
 
 public class OperatorEnum {
 	

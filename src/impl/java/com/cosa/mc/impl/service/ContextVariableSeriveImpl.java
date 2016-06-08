@@ -3,7 +3,7 @@ package com.cosa.mc.impl.service;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.cosa.mc.api.ele.ContextVariable;
+import com.cosa.mc.api.core.ContextVariable;
 import com.cosa.mc.api.service.ContextVariableService;
 
 

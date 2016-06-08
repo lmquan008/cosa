@@ -1,7 +1,7 @@
 package com.cosa.mc.impl.value;
 
-import com.cosa.mc.api.Context;
-import com.cosa.mc.api.ele.Value;
+import com.cosa.mc.api.core.Context;
+import com.cosa.mc.api.value.Value;
 
 public abstract class AbstractValue implements Value{
 

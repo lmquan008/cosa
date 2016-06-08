@@ -1,4 +1,4 @@
-package com.cosa.mc.api.ele;
+package com.cosa.mc.api.core;
 
 import java.util.Set;
 

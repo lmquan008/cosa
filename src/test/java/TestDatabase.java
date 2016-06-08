@@ -1,7 +1,7 @@
 import org.junit.Test;
 
-import com.cosa.mc.api.ele.Operator;
-import com.cosa.mc.api.ele.Value;
+import com.cosa.mc.api.operator.Operator;
+import com.cosa.mc.api.value.Value;
 import com.cosa.mc.impl.operator.GreaterThanOperator;
 
 public class TestDatabase {

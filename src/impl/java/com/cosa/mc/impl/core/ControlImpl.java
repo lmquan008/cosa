@@ -1,4 +1,4 @@
-package com.cosa.mc.impl.ele;
+package com.cosa.mc.impl.core;
 
 public class ControlImpl extends AbstractControl {
 

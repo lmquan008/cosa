@@ -1,7 +1,7 @@
-package com.cosa.mc.impl.ele;
+package com.cosa.mc.impl.core;
 
-import com.cosa.mc.api.ele.Control;
-import com.cosa.mc.api.ele.RuleSet;
+import com.cosa.mc.api.core.Control;
+import com.cosa.mc.api.core.RuleSet;
 
 public abstract class AbstractControl implements Control{
 	private String id;

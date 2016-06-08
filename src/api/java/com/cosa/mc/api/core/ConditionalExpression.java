@@ -1,6 +1,7 @@
-package com.cosa.mc.api.ele;
+package com.cosa.mc.api.core;
 
-import com.cosa.mc.api.Context;
+import com.cosa.mc.api.operator.Operator;
+import com.cosa.mc.api.value.Value;
 
 public interface ConditionalExpression {
 	ContextVariable getVariable();

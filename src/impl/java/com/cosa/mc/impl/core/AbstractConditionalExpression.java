@@ -1,9 +1,9 @@
-package com.cosa.mc.impl.ele;
+package com.cosa.mc.impl.core;
 
-import com.cosa.mc.api.Context;
-import com.cosa.mc.api.ele.ConditionalExpression;
-import com.cosa.mc.api.ele.ContextVariable;
-import com.cosa.mc.api.ele.Value;
+import com.cosa.mc.api.core.ConditionalExpression;
+import com.cosa.mc.api.core.Context;
+import com.cosa.mc.api.core.ContextVariable;
+import com.cosa.mc.api.value.Value;
 import com.cosa.mc.impl.operator.ComparableOperator;
 import com.cosa.mc.impl.value.BooleanValue;
 

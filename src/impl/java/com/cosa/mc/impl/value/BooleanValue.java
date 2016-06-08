@@ -1,6 +1,6 @@
 package com.cosa.mc.impl.value;
 
-import com.cosa.mc.api.ele.Value;
+import com.cosa.mc.api.value.Value;
 
 public class BooleanValue extends AbstractValue {
 	private Boolean value;

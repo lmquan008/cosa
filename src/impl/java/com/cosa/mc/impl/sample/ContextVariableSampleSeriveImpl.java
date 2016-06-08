@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 
 import com.cosa.mc.api.anotated.ContextObject;
 import com.cosa.mc.api.anotated.ContextProperty;
-import com.cosa.mc.api.ele.ContextVariable;
+import com.cosa.mc.api.core.ContextVariable;
 import com.cosa.mc.api.service.ContextVariableService;
-import com.cosa.mc.impl.ele.ContextVariableImpl;
+import com.cosa.mc.impl.core.ContextVariableImpl;
 
 @Service
 @Qualifier("contextVariableSampleService")
