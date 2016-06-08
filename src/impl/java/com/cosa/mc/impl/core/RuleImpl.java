@@ -8,7 +8,7 @@ import com.cosa.mc.api.core.RuleCondition;
 import com.cosa.mc.api.core.RuleSet;
 import com.cosa.mc.api.value.Value;
 
-public abstract class AbstractRule implements Rule {
+public abstract class RuleImpl implements Rule {
 
 	transient private RuleSet ruleSet;
 	private LocalDate startDate;

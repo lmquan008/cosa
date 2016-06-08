@@ -7,7 +7,7 @@ import com.cosa.mc.api.value.Value;
 import com.cosa.mc.impl.operator.ComparableOperator;
 import com.cosa.mc.impl.value.BooleanValue;
 
-public abstract class AbstractConditionalExpression implements ConditionalExpression {
+public abstract class ConditionalExpressionImpl implements ConditionalExpression {
 
 	private ContextVariable variable;
 	private ComparableOperator operator;

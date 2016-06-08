@@ -7,7 +7,7 @@ import com.cosa.mc.api.core.Control;
 import com.cosa.mc.api.core.Rule;
 import com.cosa.mc.api.core.RuleSet;
 
-public abstract class AbstractRuleset implements RuleSet {
+public abstract class RulesetImpl implements RuleSet {
 	
 	private Set<Rule> rules;
 	transient Control control;

@@ -29,6 +29,7 @@ sourceSets {
 dependencies {
     apiCompile 'commons-codec:commons-codec:1.5'
     apiCompile 'org.hsqldb:hsqldb:2.3.4'
+    apiCompile 'com.thoughtworks.xstream:xstream:1.4.9'
     
     apiCompile 'org.springframework:spring-jdbc:'+ springVersion
     apiCompile 'org.springframework:spring-context:'+ springVersion
