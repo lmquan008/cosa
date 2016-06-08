@@ -13,7 +13,6 @@ import com.cosa.mc.api.value.Value;
  */
 public interface Rule {
 	Value getValue();
-	Boolean isDefault();
 	LocalDate getStartDate();
 	LocalDate getEndDate();
 	RuleCondition getRuleCondition();

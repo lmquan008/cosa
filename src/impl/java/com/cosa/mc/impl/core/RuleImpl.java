@@ -8,16 +8,17 @@ import com.cosa.mc.api.core.RuleCondition;
 import com.cosa.mc.api.core.RuleSet;
 import com.cosa.mc.api.value.Value;
 
-public abstract class RuleImpl implements Rule {
+public class RuleImpl implements Rule {
 
 	transient private RuleSet ruleSet;
 	private LocalDate startDate;
 	private LocalDate endDate;
+	private RuleCondition ruleCondition; 
+	private Value value;
 
 	@Override
 	public Value getValue() {
-		// TODO Auto-generated method stub
-		return null;
+		return value;
 	}
 
 	@Override
@@ -32,13 +33,14 @@ public abstract class RuleImpl implements Rule {
 
 	@Override
 	public RuleCondition getRuleCondition() {
-		return null;
+		return ruleCondition;
 	}
 	
 	@Override
 	public Control getControl() {
-		// TODO Auto-generated method stub
 		return this.ruleSet.getControl();
 	}
+	
+	
 
 }

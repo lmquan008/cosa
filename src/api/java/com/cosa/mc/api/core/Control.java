@@ -1,5 +1,7 @@
 package com.cosa.mc.api.core;
 
+import java.util.List;
+
 /**
  * 
  * A control has a set of rule
@@ -13,4 +15,5 @@ public interface Control {
 	String getDescription();
 	RuleSet getRuleSet();
 	RuleSet getDefaultRuleSet();
+	int[] getZones();
 }

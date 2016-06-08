@@ -1,14 +1,33 @@
 package com.cosa.mc.impl.core;
 
+import java.util.Collections;
+import java.util.List;
+
 import com.cosa.mc.api.core.Control;
 import com.cosa.mc.api.core.RuleSet;
 
-public abstract class ControlImpl implements Control{
+public class ControlImpl implements Control{
 	private String id;
 	private String name;
 	private String description;
-	private RuleSet ruleSet;
-	private RuleSet defaultRuleSet;
+	private RuleSet ruleSet = new RuleSetImpl();
+	private RuleSet defaultRuleSet  = new RuleSetImpl();
+	
+	private int[] zones;
+	private String[] requiredContextObjects;
+	
+	
+	
+	public ControlImpl(String id, String name, String description, int[] zones, String[] requiredContextObjects) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.zones = zones;
+		this.requiredContextObjects = requiredContextObjects;
+	}
+
+	
 	
 	@Override
 	public RuleSet getRuleSet() {
@@ -39,5 +58,9 @@ public abstract class ControlImpl implements Control{
 	@Override
 	public String getName() {
 		return name;
+	}
+	
+	public int[] getZones() {
+		return zones;
 	}
 }
